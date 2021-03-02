@@ -1,0 +1,13 @@
+.footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: blue;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: 200;
+    margin: 5px;
+  }
+}

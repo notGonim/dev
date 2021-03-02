@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   padding: 28px;
+  min-height: 72vh;
 }
 .main_text {
   flex: 0.3;
@@ -25,8 +26,10 @@
   }
 }
 .btn_lg {
-  padding: 12px;
+  padding: 14px;
   outline: none;
+  font-weight: 600;
+  font-size: 15px;
   border: none;
   margin: 8px;
   background-color: #1ba94c ;
