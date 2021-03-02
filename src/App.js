@@ -1,9 +1,10 @@
+import { Main } from "./pages/Main";
 
 function App() {
   return (
-    <div className="App">
-      <h1>working</h1>
-    </div>
+    <>
+      <Main />
+    </>
   );
 }
 
