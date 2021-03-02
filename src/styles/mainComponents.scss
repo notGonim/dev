@@ -1,0 +1,40 @@
+.main_component__container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 28px;
+}
+.main_text {
+  flex: 0.3;
+  h2 {
+    font-size: 25px;
+    padding: 10px;
+    color: #000;
+    font-weight: 800;
+  }
+  p {
+    padding: 10px;
+    color: #5d5e5f;
+  }
+}
+
+.main_img {
+  img {
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: contain;
+  }
+}
+.btn_lg {
+  padding: 12px;
+  outline: none;
+  border: none;
+  margin: 8px;
+  background-color: #1ba94c ;
+  color: white ;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff !important;
+    color: #5d5e5f !important;
+    border: 1px solid #1ba94c;
+  }
+}
