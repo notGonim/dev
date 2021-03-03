@@ -1,9 +1,11 @@
+import { Login } from "./components/Login";
 import { Main } from "./pages/Main";
 
 function App() {
   return (
     <>
-      <Main />
+      {    /*  <Main /> */}
+      <Login />
     </>
   );
 }

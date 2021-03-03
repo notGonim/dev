@@ -1,0 +1,122 @@
+.login_container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f3f7f7;
+
+  form {
+    width: 500px;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+    input {
+      width: 90%;
+      color: #2a4551;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin: 5px;
+      height: 40px;
+      border: none;
+      background-color: #f3f7f7;
+      font-size: 15px;
+      outline: none;
+      padding: 10px;
+    }
+  }
+}
+.login_text {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: #4a5c65;
+    font-size: 70px;
+    font-weight: 1500;
+    width: fit-content;
+    height: fit-content;
+    border-right: 25px solid #20ac51;
+    margin-bottom: 10px;
+  }
+  h4 {
+    color: #2a4551;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}
+
+/*
+.login_container {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 200px;
+  h2,
+  h4,
+  p {
+    margin: 5px;
+  }
+}
+.title {
+  font-size: 25px;
+  font-weight: 800;
+  border-right: 18px solid green;
+}
+.login_form {
+  width: 400px;
+  height: 250px;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.7);
+  input {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin: 5px;
+    height: 50px;
+    border: none;
+    background-color: #f3f7f7;
+  }
+  button {
+    padding: 10px;
+    margin: 5px;
+    width: 92%;
+    height: 50px;
+    font-size: large;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0074b1;
+    &:hover {
+      background-color: #f7f8fc;
+      border: 1px solid #0074b1;
+      color: #0074b1;
+    }
+  }
+}
+
+
+*/
