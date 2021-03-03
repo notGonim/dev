@@ -18,7 +18,11 @@ export const Login = () => {
                 <input type="text" placeholder="Your email" />
                 <input type="password" placeholder="Your password" />
                 <button>Log In</button>
+                <p>If you don`t have an account <span>Create Account</span></p>
             </form>
+            <div className="footer">
+                <p >By signing up you agree to our <span> Terms of Service and Privacy Policy</span></p>
+            </div>
         </div>
 
 
