@@ -1,5 +1,9 @@
 import React from 'react'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import { auth } from '../firebase'
+import { LogInAction } from '../reducers/user/userAction'
 import '../styles/signup.scss'
 export const Signup = () => {
 
@@ -11,6 +15,28 @@ export const Signup = () => {
     let history = useHistory()
 
 
+    //you should add the validation to the form 
+    const register = () => {
+        if (!name) {
+            return alert('Please enter your name')
+        }
+        auth.createUserWithEmailAndPassword(email, password)
+            .then((userAuth) => {
+                userAuth.user.updateProfile({
+                    displayName: name,
+                    photoURL: profilePic
+                }).then(() => {
+                    dispatch(LogInAction({
+                        email: userAuth.user.email,
+                        uid: userAuth.user.uid,
+                        displayName: name,
+                        photoURL: userAuth.user.photoURL
+                    }))
+                })
+            }).catch(err => {
+                alert(err)
+            })
+    }
 
 
     const createAccountLink = () => {
@@ -32,7 +58,7 @@ export const Signup = () => {
                     onChange={(e) => setProfilePic(e.target.value)} />
                 <input type="password" placeholder="Your password" value={password}
                     onChange={(e) => setPassword(e.target.value)} />
-                <button>Sign Up</button>
+                <button onClick={register}>Sign Up</button>
                 <p>If you  have an account <span onClick={createAccountLink}>Log In </span></p>
             </form>
             <div className="footer">
