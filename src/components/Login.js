@@ -11,9 +11,9 @@ export const Login = () => {
     const dispatch = useDispatch()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-   
 
-    const login = (e) => {
+
+    const loginFn = (e) => {
         e.preventDefault()
         auth.signInWithEmailAndPassword(email, password)
             .then((userAuth) => {
@@ -26,7 +26,7 @@ export const Login = () => {
                     }
                 ))
             }).catch(err => alert(err))
-
+            history.push('/')
     }
 
 
@@ -41,11 +41,11 @@ export const Login = () => {
                 <p>Join Us and Enjoy Sharing your Experience with other developers </p>
             </div>
             <form >
-                <input type="text" placeholder="Your email"  value={email}
+                <input type="text" placeholder="Your email" value={email}
                     onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" placeholder="Your password"  value={password}
-                    onChange={(e) => setPassword(e.target.value)}/>
-                <button type="submit" onClick={login}>Log In</button>
+                <input type="password" placeholder="Your password" value={password}
+                    onChange={(e) => setPassword(e.target.value)} />
+                <button type="submit" onClick={loginFn}>Log In</button>
                 <p>If you don`t have an account <span onClick={createAccountLink}>Create Account</span></p>
             </form>
 

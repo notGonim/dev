@@ -1,5 +1,4 @@
 export const LogInAction = ({ email, uid, displayName, photoURL }) => (dispatch) => {
-
     dispatch({
         type: "USER_LOGGED_IN",
         payLoad: {

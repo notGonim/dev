@@ -18,7 +18,6 @@ export const Signup = () => {
     //you should add the validation to the form 
     const register = (e) => {
         e.preventDefault()
-
         if (!name) {
             return alert('Please enter your name')
         }
@@ -38,6 +37,7 @@ export const Signup = () => {
             }).catch(err => {
                 alert(err)
             })
+        history.push('/')
     }
 
 
