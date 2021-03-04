@@ -16,7 +16,9 @@ export const Signup = () => {
 
 
     //you should add the validation to the form 
-    const register = () => {
+    const register = (e) => {
+        e.preventDefault()
+
         if (!name) {
             return alert('Please enter your name')
         }
@@ -58,7 +60,7 @@ export const Signup = () => {
                     onChange={(e) => setProfilePic(e.target.value)} />
                 <input type="password" placeholder="Your password" value={password}
                     onChange={(e) => setPassword(e.target.value)} />
-                <button onClick={register}>Sign Up</button>
+                <button type="submit" onClick={register}>Sign Up</button>
                 <p>If you  have an account <span onClick={createAccountLink}>Log In </span></p>
             </form>
             <div className="footer">
